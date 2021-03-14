@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B003DF1525FEB5D20034A272 /* songTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003DF1325FEB5D20034A272 /* songTableViewCell.swift */; };
+		B003DF1625FEB5D20034A272 /* songTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003DF1425FEB5D20034A272 /* songTableViewCell.xib */; };
 		B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0E925FD921B00206A65 /* AppDelegate.swift */; };
 		B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */; };
 		B05DA0EE25FD921B00206A65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0ED25FD921B00206A65 /* ViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B003DF1325FEB5D20034A272 /* songTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songTableViewCell.swift; sourceTree = "<group>"; };
+		B003DF1425FEB5D20034A272 /* songTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = songTableViewCell.xib; sourceTree = "<group>"; };
 		B05DA0E625FD921B00206A65 /* RPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05DA0E925FD921B00206A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				B05DA0F725FD921E00206A65 /* LaunchScreen.storyboard */,
 				B05DA0FA25FD921E00206A65 /* Info.plist */,
 				B05DA0F225FD921B00206A65 /* RPD.xcdatamodeld */,
+				B003DF1325FEB5D20034A272 /* songTableViewCell.swift */,
+				B003DF1425FEB5D20034A272 /* songTableViewCell.xib */,
 			);
 			path = RPD;
 			sourceTree = "<group>";
@@ -127,6 +133,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B003DF1625FEB5D20034A272 /* songTableViewCell.xib in Resources */,
 				B05DA0F925FD921E00206A65 /* LaunchScreen.storyboard in Resources */,
 				B05DA0F625FD921E00206A65 /* Assets.xcassets in Resources */,
 				B05DA0F125FD921B00206A65 /* Main.storyboard in Resources */,
@@ -144,6 +151,7 @@
 				B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */,
 				B05DA0F425FD921B00206A65 /* RPD.xcdatamodeld in Sources */,
 				B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */,
+				B003DF1525FEB5D20034A272 /* songTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
