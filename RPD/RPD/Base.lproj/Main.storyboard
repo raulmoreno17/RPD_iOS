@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -45,7 +46,7 @@
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="P08-KJ-SPw"/>
-                        <color key="backgroundColor" red="0.38431372549999998" green="0.0" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="purpleColor"/>
                         <constraints>
                             <constraint firstItem="QMi-E2-f3n" firstAttribute="top" secondItem="P08-KJ-SPw" secondAttribute="top" constant="61" id="9KW-p6-UX2"/>
                             <constraint firstItem="cuP-To-7WP" firstAttribute="centerX" secondItem="u9h-3i-uYg" secondAttribute="centerX" id="9Uc-oP-V1B"/>
@@ -84,17 +85,17 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="PJQ-xD-eZo"/>
                                 </items>
-                                <color key="barTintColor" red="0.38431372549999998" green="0.0" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" name="purpleColor"/>
                             </toolbar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create your first RPD :D" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drs-M2-pbk">
                                 <rect key="frame" x="116.66666666666669" y="437.66666666666669" width="181" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" name="fontColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="drs-M2-pbk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Xjx-t9-GYb"/>
                             <constraint firstItem="drs-M2-pbk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hug-lL-xE0"/>
@@ -154,7 +155,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bCY-Rq-7Bq"/>
-                        <color key="backgroundColor" red="0.38431372549999998" green="0.0" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="purpleColor"/>
                         <constraints>
                             <constraint firstItem="bCY-Rq-7Bq" firstAttribute="trailing" secondItem="as0-tQ-hnP" secondAttribute="trailing" constant="37" id="8sP-0e-W3F"/>
                             <constraint firstItem="j2E-D8-2m0" firstAttribute="top" secondItem="as0-tQ-hnP" secondAttribute="bottom" constant="37" id="A2V-pO-aRK"/>
@@ -190,6 +191,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="S9X-eY-L9y">
                                 <rect key="frame" x="0.0" y="284" width="414" height="578"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="backgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="YJ5-Qy-dpU" detailTextLabel="Cu5-FW-056" rowHeight="60" style="IBUITableViewCellStyleSubtitle" id="bXM-uc-TF2">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
@@ -202,18 +204,19 @@
                                                     <rect key="frame" x="20" y="9.9999999999999982" width="33" height="20.333333333333332"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="fontColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cu5-FW-056">
                                                     <rect key="frame" x="19.999999999999996" y="33.333333333333329" width="43.666666666666664" height="14.333333333333334"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                    <nil key="textColor"/>
+                                                    <color key="textColor" name="fontColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="backgroundColor"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -242,7 +245,7 @@
                             </toolbar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W52-Dq-ujS"/>
-                        <color key="backgroundColor" red="0.38431372549999998" green="0.0" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="purpleColor"/>
                         <constraints>
                             <constraint firstItem="5RC-Q4-22A" firstAttribute="centerX" secondItem="l6n-ls-NGE" secondAttribute="centerX" id="DTY-LF-dz6"/>
                             <constraint firstItem="S9X-eY-L9y" firstAttribute="leading" secondItem="W52-Dq-ujS" secondAttribute="leading" id="DpQ-5Q-Sk4"/>
@@ -282,7 +285,7 @@
                             </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e0c-tA-7ye"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="backgroundColor"/>
                         <constraints>
                             <constraint firstItem="7Hy-P6-RJK" firstAttribute="leading" secondItem="e0c-tA-7ye" secondAttribute="leading" id="KCA-hU-5rO"/>
                             <constraint firstItem="7Hy-P6-RJK" firstAttribute="top" secondItem="e0c-tA-7ye" secondAttribute="top" constant="12" id="Ps8-oG-N85"/>
@@ -305,7 +308,7 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" red="0.38431372549999998" green="0.0" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" name="purpleColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -322,6 +325,15 @@
         <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
         <image name="shuffle" catalog="system" width="128" height="93"/>
         <image name="trash" catalog="system" width="121" height="128"/>
+        <namedColor name="backgroundColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="fontColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </namedColor>
+        <namedColor name="purpleColor">
+            <color red="0.38431372549019605" green="0.0" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
