@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B003DF1525FEB5D20034A272 /* songTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003DF1325FEB5D20034A272 /* songTableViewCell.swift */; };
-		B003DF1625FEB5D20034A272 /* songTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B003DF1425FEB5D20034A272 /* songTableViewCell.xib */; };
+		8C26F13BA73C4D43B3CB394A /* Pods_RPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0A26B33133EF30CD01BE0B /* Pods_RPD.framework */; };
+		B02C0D5026768AB600975921 /* CreatePlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */; };
+		B02C0D5326768B0300975921 /* PlaylistMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */; };
 		B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0E925FD921B00206A65 /* AppDelegate.swift */; };
 		B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */; };
 		B05DA0EE25FD921B00206A65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0ED25FD921B00206A65 /* ViewController.swift */; };
@@ -19,8 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B003DF1325FEB5D20034A272 /* songTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songTableViewCell.swift; sourceTree = "<group>"; };
-		B003DF1425FEB5D20034A272 /* songTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = songTableViewCell.xib; sourceTree = "<group>"; };
+		6035415B2ADCE1EF58C09C0C /* Pods-RPD.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPD.debug.xcconfig"; path = "Target Support Files/Pods-RPD/Pods-RPD.debug.xcconfig"; sourceTree = "<group>"; };
+		8D0A26B33133EF30CD01BE0B /* Pods_RPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistViewController.swift; sourceTree = "<group>"; };
+		B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistMainViewController.swift; sourceTree = "<group>"; };
 		B05DA0E625FD921B00206A65 /* RPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05DA0E925FD921B00206A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		B05DA0F525FD921E00206A65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B05DA0F825FD921E00206A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B05DA0FA25FD921E00206A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4B1FC2717B51466D23B50C2 /* Pods-RPD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPD.release.xcconfig"; path = "Target Support Files/Pods-RPD/Pods-RPD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +41,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C26F13BA73C4D43B3CB394A /* Pods_RPD.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		572AB4D9AD2C8B28719ED4B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D0A26B33133EF30CD01BE0B /* Pods_RPD.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7409818530445023425A7611 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6035415B2ADCE1EF58C09C0C /* Pods-RPD.debug.xcconfig */,
+				F4B1FC2717B51466D23B50C2 /* Pods-RPD.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0549E91266AF11F0034DC07 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B05DA0ED25FD921B00206A65 /* ViewController.swift */,
+				B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */,
+				B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
 		B05DA0DD25FD921B00206A65 = {
 			isa = PBXGroup;
 			children = (
 				B05DA0E825FD921B00206A65 /* RPD */,
 				B05DA0E725FD921B00206A65 /* Products */,
+				7409818530445023425A7611 /* Pods */,
+				572AB4D9AD2C8B28719ED4B4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,16 +96,14 @@
 		B05DA0E825FD921B00206A65 /* RPD */ = {
 			isa = PBXGroup;
 			children = (
+				B0549E91266AF11F0034DC07 /* ViewControllers */,
 				B05DA0E925FD921B00206A65 /* AppDelegate.swift */,
 				B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */,
-				B05DA0ED25FD921B00206A65 /* ViewController.swift */,
 				B05DA0EF25FD921B00206A65 /* Main.storyboard */,
 				B05DA0F525FD921E00206A65 /* Assets.xcassets */,
 				B05DA0F725FD921E00206A65 /* LaunchScreen.storyboard */,
 				B05DA0FA25FD921E00206A65 /* Info.plist */,
 				B05DA0F225FD921B00206A65 /* RPD.xcdatamodeld */,
-				B003DF1325FEB5D20034A272 /* songTableViewCell.swift */,
-				B003DF1425FEB5D20034A272 /* songTableViewCell.xib */,
 			);
 			path = RPD;
 			sourceTree = "<group>";
@@ -83,9 +115,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B05DA0FD25FD921E00206A65 /* Build configuration list for PBXNativeTarget "RPD" */;
 			buildPhases = (
+				79B57094C23762AB2D72DBF4 /* [CP] Check Pods Manifest.lock */,
 				B05DA0E225FD921B00206A65 /* Sources */,
 				B05DA0E325FD921B00206A65 /* Frameworks */,
 				B05DA0E425FD921B00206A65 /* Resources */,
+				4170B794E7D2A2F3B5459A3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -133,7 +167,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B003DF1625FEB5D20034A272 /* songTableViewCell.xib in Resources */,
 				B05DA0F925FD921E00206A65 /* LaunchScreen.storyboard in Resources */,
 				B05DA0F625FD921E00206A65 /* Assets.xcassets in Resources */,
 				B05DA0F125FD921B00206A65 /* Main.storyboard in Resources */,
@@ -142,6 +175,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4170B794E7D2A2F3B5459A3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RPD/Pods-RPD-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-RPD/Pods-RPD-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RPD/Pods-RPD-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79B57094C23762AB2D72DBF4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RPD-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B05DA0E225FD921B00206A65 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -149,9 +224,10 @@
 			files = (
 				B05DA0EE25FD921B00206A65 /* ViewController.swift in Sources */,
 				B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */,
+				B02C0D5326768B0300975921 /* PlaylistMainViewController.swift in Sources */,
+				B02C0D5026768AB600975921 /* CreatePlaylistViewController.swift in Sources */,
 				B05DA0F425FD921B00206A65 /* RPD.xcdatamodeld in Sources */,
 				B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */,
-				B003DF1525FEB5D20034A272 /* songTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,12 +371,13 @@
 		};
 		B05DA0FE25FD921E00206A65 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6035415B2ADCE1EF58C09C0C /* Pods-RPD.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RPD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,12 +391,13 @@
 		};
 		B05DA0FF25FD921E00206A65 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4B1FC2717B51466D23B50C2 /* Pods-RPD.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = RPD/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
