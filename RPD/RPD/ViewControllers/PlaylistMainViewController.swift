@@ -40,6 +40,13 @@ class PlaylistMainViewController: UIViewController {
         
     }
     
+    @IBAction func didTapAddButton(){
+        guard let searchViewController = storyboard?.instantiateViewController(identifier: "search") as? SearchViewController else {
+            return
+        }
+        navigationController?.pushViewController(searchViewController, animated: true)
+    }
+    
 
 
 }
