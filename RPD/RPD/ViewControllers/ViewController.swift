@@ -67,6 +67,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         navigationController?.pushViewController(createPlaylistViewController, animated: true)
     }
     
+    @IBAction func didTapInfoButton(){
+        guard let infoPlaylistViewController = storyboard?.instantiateViewController(identifier: "info") as? InfoViewController else {
+            return
+        }
+        navigationController?.pushViewController(infoPlaylistViewController, animated: true)
+    }
+    
     // Recarga todos los items del tableView
     func refresh(){
         data = realm.objects(PlaylistListItem.self).map({$0})

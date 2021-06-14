@@ -17,6 +17,7 @@
 		B05DA0F425FD921B00206A65 /* RPD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0F225FD921B00206A65 /* RPD.xcdatamodeld */; };
 		B05DA0F625FD921E00206A65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B05DA0F525FD921E00206A65 /* Assets.xcassets */; };
 		B05DA0F925FD921E00206A65 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B05DA0F725FD921E00206A65 /* LaunchScreen.storyboard */; };
+		B06F24D82677F3FE00A79C31 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06F24D72677F3FE00A79C31 /* InfoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		B05DA0F525FD921E00206A65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B05DA0F825FD921E00206A65 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B05DA0FA25FD921E00206A65 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B06F24D72677F3FE00A79C31 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		F4B1FC2717B51466D23B50C2 /* Pods-RPD.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPD.release.xcconfig"; path = "Target Support Files/Pods-RPD/Pods-RPD.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +73,7 @@
 				B05DA0ED25FD921B00206A65 /* ViewController.swift */,
 				B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */,
 				B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */,
+				B06F24D72677F3FE00A79C31 /* InfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				B05DA0EE25FD921B00206A65 /* ViewController.swift in Sources */,
 				B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */,
 				B02C0D5326768B0300975921 /* PlaylistMainViewController.swift in Sources */,
+				B06F24D82677F3FE00A79C31 /* InfoViewController.swift in Sources */,
 				B02C0D5026768AB600975921 /* CreatePlaylistViewController.swift in Sources */,
 				B05DA0F425FD921B00206A65 /* RPD.xcdatamodeld in Sources */,
 				B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */,
