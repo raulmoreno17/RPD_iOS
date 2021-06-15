@@ -7,9 +7,18 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITextFieldDelegate {
+class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, ModelDelegate {
+    
+    
+    // El table view solo muestra informacion, pero no contiene informacion en si mismo. Para esto tiene que llamar a un dataSource que por default esta vacio. El dataSource debe tener ciertos metodos especificos (Protocols) para proveer la informacion y que el table view lo entienda. Para esto nos aseguraremos de que nuestro viewController tiene estos protocolos
+    
+    //  No es posible escribir codigo en el tableView para tratar la interaccion del usuario. Existe una propiedad que funciona de forma parecida al dataSource, se llama delegate. Por defecto esta vacio y si no le mandamos nada, el tableView no harà nada cuando demos tap en la lista. Igualmente tenemos que darle un delegate con ciertos protocolos especificos
+    @IBOutlet weak var tableView: UITableView!
     
     var model = Model()
+    
+    // Arreglo vacio de videos para testear
+    var videos = [Video]()
     
     @IBOutlet var textField: UITextField!
 
@@ -20,8 +29,14 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
         textField.becomeFirstResponder()
         textField.delegate = self
         
-        model.getVideos()
+        // Aqui asignamos al viewController como dataSource y delegate
+        tableView.dataSource = self
+        tableView.delegate = self
         
+        // Se asigna a si mismo como delegate del model
+        model.delegate = self
+        
+        model.getVideos()
         
     }
     
@@ -29,6 +44,43 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
+    }
+    
+    //  Metodos para el ModelDelegate
+    
+    func videosFetch(_ videos: [Video]) {
+        // Añade los videos retornados a nuestro video property
+        self.videos = videos
+        
+        //  Refresca el tableView
+        tableView.reloadData()
+    }
+    
+    
+    //  Metodos para el TableView
+    
+    //      Devuelve el numero de rows detectados
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return videos.count
+    }
+    
+    //      Inserta una celda en el tableView
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        //  Indica que template vamos a usar para el cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: YoutubeAPI.VIDEOCELL_ID, for: indexPath)
+        
+        // Configura la celda con la informacion
+        
+        let title = self.videos[indexPath.row].title
+        cell.textLabel?.text = title
+        
+        // Retorna la cell
+        return cell
+    }
+    
+    //Gestiona las acciones a realizar cuando presionas una row del tableView
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
     }
     
 

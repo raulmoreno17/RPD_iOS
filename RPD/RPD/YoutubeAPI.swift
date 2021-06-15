@@ -13,6 +13,6 @@ struct YoutubeAPI {
     static var query = "BP"
     static var type = "&type=video"
     
-    
+    static var VIDEOCELL_ID = "VideoCell"
            
 }
