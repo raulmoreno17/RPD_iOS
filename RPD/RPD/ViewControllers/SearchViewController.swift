@@ -66,13 +66,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     
     //      Inserta una celda en el tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        //  Indica que template vamos a usar para el cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: YoutubeAPI.VIDEOCELL_ID, for: indexPath)
+        //  Indica que template vamos a usar para el cell, especificamente es el que hicimos en VideoTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: YoutubeAPI.VIDEOCELL_ID, for: indexPath) as! VideoTableViewCell
         
         // Configura la celda con la informacion
-        
-        let title = self.videos[indexPath.row].title
-        cell.textLabel?.text = title
+        let video = self.videos[indexPath.row]
+        cell.setCell(video)
         
         // Retorna la cell
         return cell

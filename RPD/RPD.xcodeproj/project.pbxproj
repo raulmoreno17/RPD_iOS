@@ -10,6 +10,7 @@
 		8C26F13BA73C4D43B3CB394A /* Pods_RPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0A26B33133EF30CD01BE0B /* Pods_RPD.framework */; };
 		B02C0D5026768AB600975921 /* CreatePlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */; };
 		B02C0D5326768B0300975921 /* PlaylistMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */; };
+		B05B438526792B79004E5C2F /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B438426792B79004E5C2F /* VideoTableViewCell.swift */; };
 		B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0E925FD921B00206A65 /* AppDelegate.swift */; };
 		B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */; };
 		B05DA0EE25FD921B00206A65 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0ED25FD921B00206A65 /* ViewController.swift */; };
@@ -30,6 +31,7 @@
 		8D0A26B33133EF30CD01BE0B /* Pods_RPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistViewController.swift; sourceTree = "<group>"; };
 		B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistMainViewController.swift; sourceTree = "<group>"; };
+		B05B438426792B79004E5C2F /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		B05DA0E625FD921B00206A65 /* RPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05DA0E925FD921B00206A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,33 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		B05B438726792BA6004E5C2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B0FB068B2678120200A8CA91 /* Video.swift */,
+				B0FB068E267812DA00A8CA91 /* Model.swift */,
+				B07179DC2678498800BEBCA0 /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B05B438826792BE5004E5C2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B05B438426792B79004E5C2F /* VideoTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B05B438926792BF5004E5C2F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B05DA0EF25FD921B00206A65 /* Main.storyboard */,
+				B05DA0F725FD921E00206A65 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
 		B05DA0DD25FD921B00206A65 = {
 			isa = PBXGroup;
 			children = (
@@ -110,18 +139,16 @@
 		B05DA0E825FD921B00206A65 /* RPD */ = {
 			isa = PBXGroup;
 			children = (
-				B0549E91266AF11F0034DC07 /* ViewControllers */,
 				B05DA0E925FD921B00206A65 /* AppDelegate.swift */,
 				B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */,
-				B05DA0EF25FD921B00206A65 /* Main.storyboard */,
-				B05DA0F525FD921E00206A65 /* Assets.xcassets */,
-				B05DA0F725FD921E00206A65 /* LaunchScreen.storyboard */,
-				B05DA0FA25FD921E00206A65 /* Info.plist */,
-				B05DA0F225FD921B00206A65 /* RPD.xcdatamodeld */,
+				B05B438926792BF5004E5C2F /* Storyboards */,
+				B05B438726792BA6004E5C2F /* Models */,
+				B05B438826792BE5004E5C2F /* Views */,
+				B0549E91266AF11F0034DC07 /* ViewControllers */,
 				B0FB068826780C8800A8CA91 /* YoutubeAPI.swift */,
-				B0FB068B2678120200A8CA91 /* Video.swift */,
-				B0FB068E267812DA00A8CA91 /* Model.swift */,
-				B07179DC2678498800BEBCA0 /* Response.swift */,
+				B05DA0FA25FD921E00206A65 /* Info.plist */,
+				B05DA0F525FD921E00206A65 /* Assets.xcassets */,
+				B05DA0F225FD921B00206A65 /* RPD.xcdatamodeld */,
 			);
 			path = RPD;
 			sourceTree = "<group>";
@@ -241,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05DA0EE25FD921B00206A65 /* ViewController.swift in Sources */,
+				B05B438526792B79004E5C2F /* VideoTableViewCell.swift in Sources */,
 				B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */,
 				B06F24DB2677F94D00A79C31 /* SearchViewController.swift in Sources */,
 				B02C0D5326768B0300975921 /* PlaylistMainViewController.swift in Sources */,
