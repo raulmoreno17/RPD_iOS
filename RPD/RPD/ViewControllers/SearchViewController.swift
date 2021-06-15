@@ -39,6 +39,22 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         model.getVideos()
         
     }
+    // Se activa cuando te mueves al videoViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //  Confirmar que un video fue presionado
+        guard tableView.indexPathForSelectedRow != nil else { return }
+        
+        // Obtener una referencia a el video que se presionò
+        let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
+        
+        
+        //  Obtener una referencia a el videoViewController
+        let videoViewController = segue.destination as! VideoViewController
+        videoViewController.video = selectedVideo
+        
+        //  Añadir la prop del video al videoViewController
+    }
+    
     
     // Quita el teclado cuando terminas de escribir en el text field
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

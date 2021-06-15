@@ -62,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NBs-OM-wRl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="-559"/>
+            <point key="canvasLocation" x="3004" y="-560"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -180,7 +180,69 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zej-dR-pLr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004" y="835"/>
+            <point key="canvasLocation" x="3004" y="821"/>
+        </scene>
+        <!--Video View Controller-->
+        <scene sceneID="5nf-2T-haf">
+            <objects>
+                <viewController id="Jhz-00-aqU" customClass="VideoViewController" customModule="RPD" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Smg-zD-BaF">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YOO-gj-yZ9">
+                                <rect key="frame" x="10" y="50" width="300" height="498"/>
+                                <subviews>
+                                    <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2e3-4n-Enp">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="169"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="2e3-4n-Enp" secondAttribute="height" multiplier="1280:720" id="wLB-Pc-3NW"/>
+                                        </constraints>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RHM-IF-BId">
+                                        <rect key="frame" x="0.0" y="179" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRD-tk-uls">
+                                        <rect key="frame" x="0.0" y="209.5" width="300" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIA-a7-ywh">
+                                        <rect key="frame" x="0.0" y="240" width="300" height="258"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OOM-Rt-5ZM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YOO-gj-yZ9" firstAttribute="top" secondItem="OOM-Rt-5ZM" secondAttribute="top" constant="50" id="KKH-c7-ucL"/>
+                            <constraint firstItem="OOM-Rt-5ZM" firstAttribute="trailing" secondItem="YOO-gj-yZ9" secondAttribute="trailing" constant="10" id="QlT-GI-g8o"/>
+                            <constraint firstItem="YOO-gj-yZ9" firstAttribute="leading" secondItem="OOM-Rt-5ZM" secondAttribute="leading" constant="10" id="tGv-wh-LAy"/>
+                            <constraint firstItem="OOM-Rt-5ZM" firstAttribute="bottom" secondItem="YOO-gj-yZ9" secondAttribute="bottom" id="thX-pE-huW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ivb-kf-awq"/>
+                    <connections>
+                        <outlet property="channelLabel" destination="PRD-tk-uls" id="Rec-Wg-uFY"/>
+                        <outlet property="saveVideoButton" destination="CIA-a7-ywh" id="Tag-El-af9"/>
+                        <outlet property="titleLabel" destination="RHM-IF-BId" id="4rB-ON-bUO"/>
+                        <outlet property="webView" destination="2e3-4n-Enp" id="9RX-pQ-8MB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4gt-Rj-MXM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4524" y="821"/>
         </scene>
         <!--Playlist Main View Controller-->
         <scene sceneID="Ezp-BV-fxg">
@@ -236,7 +298,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fte-Ua-Zul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3833" y="125"/>
+            <point key="canvasLocation" x="3713" y="125"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="MbS-VA-o9s">
@@ -255,7 +317,7 @@
                                 <rect key="frame" x="10" y="58" width="300" height="490"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="syd-il-duC" customClass="VideoTableViewCell" customModule="RPD" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="VideoCell" id="syd-il-duC" customClass="VideoTableViewCell" customModule="RPD" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="300" height="208.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="syd-il-duC" id="qGz-h6-nhE">
@@ -290,6 +352,7 @@
                                         <connections>
                                             <outlet property="thumbnailImageView" destination="xos-aW-9ea" id="hoA-Wg-FoI"/>
                                             <outlet property="titleLabel" destination="sjd-CY-daS" id="5x3-W1-DoO"/>
+                                            <segue destination="Jhz-00-aqU" kind="show" id="ZxX-Be-MWm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -323,7 +386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fA3-uz-nbQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4680" y="124"/>
+            <point key="canvasLocation" x="4526" y="125"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sAI-3O-K31">
