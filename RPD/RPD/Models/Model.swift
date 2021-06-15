@@ -12,10 +12,10 @@ class Model {
     
     
     
-    func getVideos(){
+    func getVideos(query: String){
     
         //  Crear un URL object
-        let url = URL(string: YoutubeAPI.BASE_URL_START + YoutubeAPI.query + YoutubeAPI.type)
+        let url = URL(string: YoutubeAPI.BASE_URL_START + query + YoutubeAPI.type)
         
         // Url podria ser nil, por lo que ponemos un guard
         guard url != nil else { return }

@@ -365,6 +365,9 @@
                                 <state key="normal" title="Search">
                                     <color key="titleColor" name="purpleColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="didTapSearchButton" destination="XoD-hs-EoT" eventType="touchUpInside" id="5BX-Wo-oCM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="e0c-tA-7ye"/>

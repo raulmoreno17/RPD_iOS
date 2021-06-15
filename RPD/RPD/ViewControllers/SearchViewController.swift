@@ -36,9 +36,24 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         // Se asigna a si mismo como delegate del model
         model.delegate = self
         
-        model.getVideos()
+        
         
     }
+    
+    @IBAction func didTapSearchButton(){
+        //Revisa si hay texto e inicia la busqueda
+        if let text = textField.text, !text.isEmpty{
+            
+            let query = text.lowerKebabCased()
+            model.getVideos(query: query)
+            
+            
+        }else{
+            print("Add text")
+        }
+        
+    }
+    
     // Se activa cuando te mueves al videoViewController
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //  Confirmar que un video fue presionado
@@ -46,7 +61,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         
         // Obtener una referencia a el video que se presionò
         let selectedVideo = videos[tableView.indexPathForSelectedRow!.row]
-        
         
         //  Obtener una referencia a el videoViewController
         let videoViewController = segue.destination as! VideoViewController
@@ -98,5 +112,21 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         
     }
     
+    
+    
+    
 
+}
+
+/// An extension to format strings in *kebab case*.
+extension String {
+    /// A collection of all the words in the string by separating out any punctuation and spaces.
+    var words: [String] {
+        return components(separatedBy: CharacterSet.alphanumerics.inverted).filter { !$0.isEmpty }
+    }
+
+    /// Returns a lowercased copy of the string with punctuation removed and spaces replaced
+    func lowerKebabCased() -> String {
+        return self.words.map({ $0.lowercased() }).joined(separator: "-")
+    }
 }
