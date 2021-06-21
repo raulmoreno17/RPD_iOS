@@ -10,7 +10,7 @@ import UIKit
 
 class PlaylistMainViewController: UIViewController {
 
-    public var item: PlaylistListItem?
+    public var item: PlaylistItem?
     
     public var deletionHandler: (() -> Void)?
     
@@ -41,9 +41,11 @@ class PlaylistMainViewController: UIViewController {
     }
     
     @IBAction func didTapAddButton(){
+        let currentPlaylistName = item
         guard let searchViewController = storyboard?.instantiateViewController(identifier: "search") as? SearchViewController else {
             return
         }
+        searchViewController.item = currentPlaylistName
         navigationController?.pushViewController(searchViewController, animated: true)
     }
     

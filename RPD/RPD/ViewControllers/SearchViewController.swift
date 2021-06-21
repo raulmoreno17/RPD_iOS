@@ -9,6 +9,8 @@ import UIKit
 
 class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, ModelDelegate {
     
+    //  Nombre de la playlist actual
+    public var item: PlaylistItem?
     
     // El table view solo muestra informacion, pero no contiene informacion en si mismo. Para esto tiene que llamar a un dataSource que por default esta vacio. El dataSource debe tener ciertos metodos especificos (Protocols) para proveer la informacion y que el table view lo entienda. Para esto nos aseguraremos de que nuestro viewController tiene estos protocolos
     
@@ -21,6 +23,9 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     var videos = [Video]()
     
     @IBOutlet var textField: UITextField!
+    
+ 
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +41,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         // Se asigna a si mismo como delegate del model
         model.delegate = self
         
+        print("playlist actual: " + item!.item)
         
         
     }
@@ -65,6 +71,7 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         //  Obtener una referencia a el videoViewController
         let videoViewController = segue.destination as! VideoViewController
         videoViewController.video = selectedVideo
+        videoViewController.item = item
         
         //  Añadir la prop del video al videoViewController
     }
@@ -109,8 +116,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     
     //Gestiona las acciones a realizar cuando presionas una row del tableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-    }
+    
+   }
     
     
     

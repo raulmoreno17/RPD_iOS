@@ -46,9 +46,9 @@ class CreatePlaylistViewController: UIViewController, UITextFieldDelegate {
             
             realm.beginWrite()
             
-            let newItem = PlaylistListItem()
-            newItem.item = text
-            realm.add(newItem)
+            let playlist = PlaylistItem()
+            playlist.item = text
+            realm.add(playlist)
             
             try! realm.commitWrite()
             
