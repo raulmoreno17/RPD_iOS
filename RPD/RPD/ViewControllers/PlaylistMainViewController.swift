@@ -9,14 +9,11 @@ import RealmSwift
 import UIKit
 
 class PlaylistMainViewController: UIViewController {
-
+    private let realm = try! Realm()
     public var item: PlaylistItem?
-    
-    public var deletionHandler: (() -> Void)?
+    var modelRealm = ModelRealm()
     
     @IBOutlet var itemLabel: UILabel!
-    
-    private let realm = try! Realm()
     
     
     
@@ -25,21 +22,11 @@ class PlaylistMainViewController: UIViewController {
         
         // Asigna al label vacio el nombre de la playlist
         itemLabel.text = item?.item
-    }
-    
-    // Elimina la playlist actual
-    @IBAction func didTapDeleteButton(){
-        guard let currentItem = self.item else {
-            return
-        }
-        realm.beginWrite()
-        realm.delete(currentItem)
-        try! realm.commitWrite()
-        deletionHandler?()
-        navigationController?.popToRootViewController(animated: true)
         
+        modelRealm.getVideosRealm()
     }
     
+
     @IBAction func didTapAddButton(){
         let currentPlaylistName = item
         guard let searchViewController = storyboard?.instantiateViewController(identifier: "search") as? SearchViewController else {

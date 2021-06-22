@@ -10,6 +10,9 @@
 		8C26F13BA73C4D43B3CB394A /* Pods_RPD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8D0A26B33133EF30CD01BE0B /* Pods_RPD.framework */; };
 		B02C0D5026768AB600975921 /* CreatePlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */; };
 		B02C0D5326768B0300975921 /* PlaylistMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */; };
+		B057237D26825C2400166DB0 /* VideoRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057237C26825C2400166DB0 /* VideoRealm.swift */; };
+		B057238026825CF200166DB0 /* ModelRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057237F26825CF200166DB0 /* ModelRealm.swift */; };
+		B057238726826C2E00166DB0 /* ResponseRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B057238626826C2E00166DB0 /* ResponseRealm.swift */; };
 		B05B438526792B79004E5C2F /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05B438426792B79004E5C2F /* VideoTableViewCell.swift */; };
 		B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0E925FD921B00206A65 /* AppDelegate.swift */; };
 		B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05DA0EB25FD921B00206A65 /* SceneDelegate.swift */; };
@@ -33,6 +36,9 @@
 		8D0A26B33133EF30CD01BE0B /* Pods_RPD.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPD.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02C0D4F26768AB600975921 /* CreatePlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePlaylistViewController.swift; sourceTree = "<group>"; };
 		B02C0D5226768B0300975921 /* PlaylistMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistMainViewController.swift; sourceTree = "<group>"; };
+		B057237C26825C2400166DB0 /* VideoRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoRealm.swift; sourceTree = "<group>"; };
+		B057237F26825CF200166DB0 /* ModelRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelRealm.swift; sourceTree = "<group>"; };
+		B057238626826C2E00166DB0 /* ResponseRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseRealm.swift; sourceTree = "<group>"; };
 		B05B438426792B79004E5C2F /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		B05DA0E625FD921B00206A65 /* RPD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B05DA0E925FD921B00206A65 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +110,9 @@
 				B0FB068B2678120200A8CA91 /* Video.swift */,
 				B0FB068E267812DA00A8CA91 /* Model.swift */,
 				B07179DC2678498800BEBCA0 /* Response.swift */,
+				B057237C26825C2400166DB0 /* VideoRealm.swift */,
+				B057237F26825CF200166DB0 /* ModelRealm.swift */,
+				B057238626826C2E00166DB0 /* ResponseRealm.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -276,6 +285,7 @@
 			files = (
 				B05DA0EE25FD921B00206A65 /* ViewController.swift in Sources */,
 				B05B438526792B79004E5C2F /* VideoTableViewCell.swift in Sources */,
+				B057237D26825C2400166DB0 /* VideoRealm.swift in Sources */,
 				B05DA0EA25FD921B00206A65 /* AppDelegate.swift in Sources */,
 				B06F24DB2677F94D00A79C31 /* SearchViewController.swift in Sources */,
 				B02C0D5326768B0300975921 /* PlaylistMainViewController.swift in Sources */,
@@ -286,7 +296,9 @@
 				B0FB068926780C8800A8CA91 /* YoutubeAPI.swift in Sources */,
 				B05DA0F425FD921B00206A65 /* RPD.xcdatamodeld in Sources */,
 				B0FB068F267812DA00A8CA91 /* Model.swift in Sources */,
+				B057238026825CF200166DB0 /* ModelRealm.swift in Sources */,
 				B05DA0EC25FD921B00206A65 /* SceneDelegate.swift in Sources */,
+				B057238726826C2E00166DB0 /* ResponseRealm.swift in Sources */,
 				B0FB068C2678120200A8CA91 /* Video.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -21,30 +21,21 @@ class SongItem: Object{
 //  Definimos el atributo que vamos a usar para guardar cada nombre de playlist
 class PlaylistItem: Object{
     @objc dynamic var item: String = ""
-    
-    //let songItems = List<SongItem>()
-    
     override static func primaryKey() -> String? {
         return "item"
     }
 }
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
+    private let realm = try! Realm()
     @IBOutlet var table: UITableView!
     
-    private let realm = try! Realm()
-    
-    //devuelve un arreglo con objetos, cada objeto es un playlist item
-    private var dataPlaylist = [PlaylistItem]()
-    // devuelve un arreglo con objetos, cada objeto es un song item
-    private var dataSong = [SongItem]()
+    private var dataPlaylist = [PlaylistItem]() //devuelve un arreglo con objetos, cada objeto es un playlist item
+    private var dataSong = [SongItem]() // devuelve un arreglo con objetos, cada objeto es un song item
     
     private var resultsPlaylists: Results<PlaylistItem>!
     private var dataSpecific2: PlaylistItem?
     
-  
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -52,12 +43,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dataPlaylist = realm.objects(PlaylistItem.self).map({$0})
         dataSong = realm.objects(SongItem.self).map({$0})
         
-        
         //resultsPlaylists = realm.objects(PlaylistItem.self).sorted(byKeyPath: "item") // devuelve datos ordenados
-        resultsPlaylists = realm.objects(PlaylistItem.self).filter("item == 'test2'").sorted(byKeyPath: "item", ascending: true) //obtiene datos filtrados
+        resultsPlaylists = realm.objects(PlaylistItem.self).filter("item == 'test2'") //obtiene datos filtrados
         dataSpecific2 = realm.object(ofType:PlaylistItem.self, forPrimaryKey: "test2") // Si existen playlist items con ese primary key, lo obtiene, en este caso, el item llamado test2
         
-        print(dataSong)
+       // print(dataSong)
         
         
         
@@ -90,7 +80,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             return
         }
         playlistMainViewController.item = item
-        playlistMainViewController.deletionHandler = { [weak self] in self?.refresh()}
         navigationController?.pushViewController(playlistMainViewController, animated: true)
     }
     

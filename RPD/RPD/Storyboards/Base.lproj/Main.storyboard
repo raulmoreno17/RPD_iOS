@@ -270,14 +270,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgX-L3-CXM">
-                                <rect key="frame" x="284" y="20" width="20" height="22"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="trash.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="didTapDeleteButton" destination="9ng-X2-rkG" eventType="touchUpInside" id="oyM-bB-nEN"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyo-WB-wtk">
                                 <rect key="frame" x="16" y="54" width="66" height="30"/>
                                 <state key="normal" title="Add song">
@@ -287,18 +279,22 @@
                                     <action selector="didTapAddButton" destination="9ng-X2-rkG" eventType="touchUpInside" id="g66-EA-Nkn"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AqY-Fk-Bsw">
+                                <rect key="frame" x="0.0" y="104" width="320" height="464"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W52-Dq-ujS"/>
                         <color key="backgroundColor" name="purpleColor"/>
                         <constraints>
-                            <constraint firstItem="oyo-WB-wtk" firstAttribute="top" secondItem="AUX-xf-CB8" secondAttribute="bottom" constant="8" id="5UZ-Ol-JLm"/>
-                            <constraint firstItem="DgX-L3-CXM" firstAttribute="top" secondItem="AUX-xf-CB8" secondAttribute="top" id="B8D-Ur-4vx"/>
-                            <constraint firstItem="W52-Dq-ujS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oyo-WB-wtk" secondAttribute="trailing" symbolic="YES" id="I7M-zz-MLv"/>
-                            <constraint firstItem="DgX-L3-CXM" firstAttribute="trailing" secondItem="l6n-ls-NGE" secondAttribute="trailingMargin" id="cTd-7O-Erq"/>
-                            <constraint firstItem="DgX-L3-CXM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="AUX-xf-CB8" secondAttribute="trailing" constant="8" symbolic="YES" id="eth-eX-ggy"/>
-                            <constraint firstItem="oyo-WB-wtk" firstAttribute="leading" secondItem="AUX-xf-CB8" secondAttribute="leading" id="kru-OY-Lta"/>
-                            <constraint firstItem="W52-Dq-ujS" firstAttribute="bottom" secondItem="oyo-WB-wtk" secondAttribute="bottom" constant="484" id="pGs-qb-VBv"/>
-                            <constraint firstItem="oyo-WB-wtk" firstAttribute="leading" secondItem="l6n-ls-NGE" secondAttribute="leadingMargin" id="x9v-z0-Xtf"/>
+                            <constraint firstItem="AUX-xf-CB8" firstAttribute="leading" secondItem="oyo-WB-wtk" secondAttribute="leading" id="3eG-kp-e9N"/>
+                            <constraint firstItem="AqY-Fk-Bsw" firstAttribute="leading" secondItem="l6n-ls-NGE" secondAttribute="leading" id="3g6-AD-rpZ"/>
+                            <constraint firstItem="oyo-WB-wtk" firstAttribute="top" secondItem="AUX-xf-CB8" secondAttribute="bottom" constant="8" symbolic="YES" id="6LK-9z-zYS"/>
+                            <constraint firstItem="AUX-xf-CB8" firstAttribute="top" secondItem="l6n-ls-NGE" secondAttribute="top" constant="20" symbolic="YES" id="CIq-E1-w82"/>
+                            <constraint firstItem="AqY-Fk-Bsw" firstAttribute="bottom" secondItem="W52-Dq-ujS" secondAttribute="bottom" id="Nz8-ST-vK5"/>
+                            <constraint firstAttribute="trailing" secondItem="AqY-Fk-Bsw" secondAttribute="trailing" id="ODX-BY-ead"/>
+                            <constraint firstItem="AqY-Fk-Bsw" firstAttribute="top" secondItem="oyo-WB-wtk" secondAttribute="bottom" constant="20" id="QEf-DY-w7x"/>
+                            <constraint firstItem="AUX-xf-CB8" firstAttribute="leading" secondItem="l6n-ls-NGE" secondAttribute="leadingMargin" id="Vyn-CA-Zxe"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gux-VL-8BW">
@@ -310,7 +306,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fte-Ua-Zul" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3713" y="125"/>
+            <point key="canvasLocation" x="3712.5" y="124.64788732394366"/>
         </scene>
         <!--Search View Controller-->
         <scene sceneID="MbS-VA-o9s">
@@ -428,7 +424,6 @@
     <resources>
         <image name="info.circle.fill" catalog="system" width="128" height="121"/>
         <image name="play.rectangle.fill" catalog="system" width="128" height="93"/>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <namedColor name="backgroundColor">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
