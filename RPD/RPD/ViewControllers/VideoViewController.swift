@@ -67,21 +67,6 @@ class VideoViewController: UIViewController {
         }
         
         
-        /*
-        realm.beginWrite()
-        
-        let currentSong = SongItem()
-        
-        currentSong.title = video!.title
-        currentSong.channel = video!.channelTitle
-        currentSong.videoId = video!.videoId
-        currentSong.thumbnail = video!.thumbnail
-        
-        realm.add(currentSong)
-        
-        try! realm.commitWrite()
-        */
-        
     }
 
 
