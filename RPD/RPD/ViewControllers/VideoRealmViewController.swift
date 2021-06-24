@@ -1,9 +1,3 @@
-//
-//  VideoRealmViewController.swift
-//  RPD
-//
-//  Created by Raul Moreno on 23/06/21.
-//
 
 import UIKit
 import WebKit
@@ -18,12 +12,9 @@ class VideoRealmViewController: UIViewController {
     var videoIdReceived: String?
     var channelReceived: String?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {

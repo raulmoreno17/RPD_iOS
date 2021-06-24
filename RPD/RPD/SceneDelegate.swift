@@ -1,9 +1,4 @@
-//
-//  SceneDelegate.swift
-//  RPD
-//
-//  Created by Raul Moreno on 13/03/21.
-//
+
 
 import UIKit
 

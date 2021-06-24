@@ -10,8 +10,6 @@ class Model {
     
     var delegate: ModelDelegate?
     
-    
-    
     func getVideos(query: String){
     
         //  Crear un URL object
@@ -35,7 +33,6 @@ class Model {
                 //decoder.dateDecodingStrategy = .iso8601
                 let response = try decoder.decode(Response.self, from: data!)
                 
-                
                 if response.items != nil{
                     
                     DispatchQueue.main.async {
@@ -47,14 +44,8 @@ class Model {
                 // Para probar si funciona el response
                 dump(response)
             }
-            catch{
-                
-            }      
-            
+            catch{  }
         }
-        
-        
-        //  Kick off the task
         dataTask.resume()
     }
     

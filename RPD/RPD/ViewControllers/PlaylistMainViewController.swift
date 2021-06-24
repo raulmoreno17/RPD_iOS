@@ -20,8 +20,6 @@ class PlaylistMainViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet var itemLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
-  
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +39,6 @@ class PlaylistMainViewController: UIViewController, UITableViewDataSource, UITab
         querySongs()
     }	
     
-    
-
     @IBAction func didTapAddButton(){
         let currentPlaylistName = item
         guard let searchViewController = storyboard?.instantiateViewController(identifier: "search") as? SearchViewController else {
@@ -66,7 +62,6 @@ class PlaylistMainViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     //  Metodos para el tableView
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         Songs.count
     }
@@ -122,8 +117,5 @@ class PlaylistMainViewController: UIViewController, UITableViewDataSource, UITab
         tableView.reloadData()
         
     }
-    
-    
-
 
 }

@@ -21,12 +21,8 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
     
     // Arreglo vacio de videos para testear
     var videos = [Video]()
-    
     @IBOutlet var textField: UITextField!
     
- 
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,9 +37,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         // Se asigna a si mismo como delegate del model
         model.delegate = self
         
-        print("playlist actual: " + item!.item)
-        
-        
     }
     
     @IBAction func didTapSearchButton(){
@@ -52,7 +45,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
             
             let query = text.lowerKebabCased()
             model.getVideos(query: query)
-            
             
         }else{
             print("Add text")
@@ -72,8 +64,6 @@ class SearchViewController: UIViewController, UITextFieldDelegate, UITableViewDa
         let videoViewController = segue.destination as! VideoViewController
         videoViewController.video = selectedVideo
         videoViewController.item = item
-        
-        //  Añadir la prop del video al videoViewController
     }
     
     

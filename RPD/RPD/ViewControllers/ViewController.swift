@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  RPD
-//
-//  Created by Raul Moreno on 13/03/21.
-//
 
 import RealmSwift
 import UIKit
@@ -29,28 +23,14 @@ class PlaylistItem: Object{
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     private let realm = try! Realm()
     @IBOutlet var table: UITableView!
-    
     private var dataPlaylist = [PlaylistItem]() //devuelve un arreglo con objetos, cada objeto es un playlist item
-    private var dataSong = [SongItem]() // devuelve un arreglo con objetos, cada objeto es un song item
-    
-    private var resultsPlaylists: Results<PlaylistItem>!
-    private var dataSpecific2: PlaylistItem?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(Realm.Configuration.defaultConfiguration.fileURL)
+        //print(Realm.Configuration.defaultConfiguration.fileURL)
         dataPlaylist = realm.objects(PlaylistItem.self).map({$0})
-        dataSong = realm.objects(SongItem.self).map({$0})
-        
-        //resultsPlaylists = realm.objects(PlaylistItem.self).sorted(byKeyPath: "item") // devuelve datos ordenados
-        resultsPlaylists = realm.objects(PlaylistItem.self).filter("item == 'test2'") //obtiene datos filtrados
-        dataSpecific2 = realm.object(ofType:PlaylistItem.self, forPrimaryKey: "test2") // Si existen playlist items con ese primary key, lo obtiene, en este caso, el item llamado test2
-        
-       // print(dataSong)
-        
-        
-        
+
         // Se registra el identifier de cell, por que si intentas devolver una celda sin registrar su identificador, la app crashea
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         table.delegate = self

@@ -57,8 +57,6 @@ class VideoViewController: UIViewController {
         currentSong.thumbnail = video!.thumbnail
         currentSong.playlist = item!.item
         
-        
-        let playlistItem = PlaylistItem()
         try! realm.write{
             //playlistItem.songItems.append(currentSong)
             realm.add(currentSong)

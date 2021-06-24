@@ -1,9 +1,4 @@
-//
-//  CreatePlaylistViewController.swift
-//  RPD
-//
-//  Created by Raul Moreno on 13/06/21.
-//
+
 
 import RealmSwift
 import UIKit
@@ -24,10 +19,8 @@ class CreatePlaylistViewController: UIViewController, UITextFieldDelegate {
     */    
     public var completionHandler: (() -> Void)?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Hacemos que el teclado aparezca automaticamente
         textField.becomeFirstResponder()
         textField.delegate = self

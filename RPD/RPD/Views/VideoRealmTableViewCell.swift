@@ -1,9 +1,3 @@
-//
-//  VideoRealmTableViewCell.swift
-//  RPD
-//
-//  Created by Raul Moreno on 22/06/21.
-//
 
 import UIKit
 
