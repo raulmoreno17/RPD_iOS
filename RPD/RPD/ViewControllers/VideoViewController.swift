@@ -62,6 +62,11 @@ class VideoViewController: UIViewController {
             realm.add(currentSong)
         }
         
+        let alert = UIAlertController(title: "Notification", message: "Song added successfully!", preferredStyle: .alert)
+        let action = UIAlertAction(title: "Got it", style: .default, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+        
         
     }
 

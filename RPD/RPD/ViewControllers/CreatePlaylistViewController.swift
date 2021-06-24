@@ -51,6 +51,11 @@ class CreatePlaylistViewController: UIViewController, UITextFieldDelegate {
             
         }else{
             print("Add text")
+            
+            let alert = UIAlertController(title: "Notification", message: "Add some text please", preferredStyle: .alert)
+            let action = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
         }
         
     }
