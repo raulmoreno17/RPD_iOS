@@ -48,9 +48,7 @@ class VideoViewController: UIViewController {
     }
     
     @IBAction func didTapSaveButton(){
-        print("Save pressed")
-        
-        
+
         let currentSong = SongItem()
         
         currentSong.title = video!.title

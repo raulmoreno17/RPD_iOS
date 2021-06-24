@@ -32,9 +32,14 @@ class PlaylistMainViewController: UIViewController, UITableViewDataSource, UITab
         // Asigna al label vacio el nombre de la playlist
         itemLabel.text = item?.item
         
-        querySongs()
-        
     }
+    override func viewDidAppear(_ animated: Bool) {
+        Songs = [String]()
+        Thumbnails = [String]()
+        Channels = [String]()
+        VideoIds = [String]()
+        querySongs()
+    }	
     
     
 
@@ -51,15 +56,13 @@ class PlaylistMainViewController: UIViewController, UITableViewDataSource, UITab
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //  Confirmar que un video fue presionado
         guard tableView.indexPathForSelectedRow != nil else { return }
-        
-        
-        //  Obtener una referencia a el videoViewController
+    
         let videoRealmViewController = segue.destination as! VideoRealmViewController
+        
         videoRealmViewController.titleReceived = Songs[tableView.indexPathForSelectedRow!.row]
         videoRealmViewController.channelReceived = Channels[tableView.indexPathForSelectedRow!.row]
         videoRealmViewController.videoIdReceived = VideoIds[tableView.indexPathForSelectedRow!.row]
-        
-        
+
     }
     
     //  Metodos para el tableView

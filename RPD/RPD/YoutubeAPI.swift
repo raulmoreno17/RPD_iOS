@@ -14,7 +14,7 @@ struct YoutubeAPI {
     static var type = "&type=video"
     
     static var VIDEOCELL_ID = "VideoCell"
-    static var YT_EMBED_URL = "https://www.youtube.com/embed/"
+    static var YT_EMBED_URL = "http://www.youtube.com/embed/"
     
            
 }
